@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Navigate } from "react-router-dom";
+import { NavLink, Navigate } from "react-router-dom";
 import * as sessionActions from "../../../store/session";
 import './SignupForm.css';
 
@@ -80,7 +80,12 @@ function SignupForm() {
         </form>
       </div>
       <div className="signuplogin__footer">
+        {errors.length===0
+        ?
+        <NavLink to="/login-signup" state={{showform:false}}>Already Signed Up? Login Here!</NavLink>
+        :
         <ul>{errors.map((error, idx) => <li key={idx}>{error}</li>)}</ul>
+        }
       </div>
 
 

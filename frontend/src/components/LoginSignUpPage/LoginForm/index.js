@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as sessionActions from "../../../store/session";
 import { useDispatch, useSelector } from "react-redux";
-import { Navigate } from "react-router-dom";
+import { NavLink, Navigate } from "react-router-dom";
 import './LoginForm.css';
 
 function LoginForm() {
@@ -63,7 +63,12 @@ function LoginForm() {
         </form>
       </div>
       <div className="signuplogin__footer">
+        {errors.length===0
+        ?
+        <NavLink to="/login-signup" state={{showform:true}}>Not Registered? Sign Up Here!</NavLink>
+        :
         <ul>{errors.map((error, idx) => <li key={idx}>{error}</li>)}</ul>
+        }
       </div>
     </div>
   );

@@ -1,12 +1,13 @@
 .FormContainer {
     position: fixed;
-    top: 0;
+    top: 125px;
     right: 0;
     left: 0;
     bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+
     z-index: -1;
 }
 
@@ -21,4 +22,5 @@
 
 .FormContainer_Content {
     background-color: rgba(0, 0, 0, 0.7);
+    max-height: 95vh;
 }
