@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
 
+
+//Material UI Imports
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
   const [showMenu, setShowMenu] = useState(false);
@@ -30,17 +34,12 @@ function ProfileButton({ user }) {
 
   return (
     <>
-      <button onClick={openMenu}>
-        Icon
-        <i className="fas fa-user-circle" />
-      </button>
+      <AccountCircleIcon fontSize="large" className="AccountCircleIcon"onClick={openMenu}/>
       {showMenu && (
         <ul className="profile-dropdown">
           <li>{user.userName}</li>
           <li>{user.email}</li>
-          <li>
-            <button onClick={logout}>Log Out</button>
-          </li>
+          <li><button onClick={logout}>Log Out</button></li>
         </ul>
       )}
     </>

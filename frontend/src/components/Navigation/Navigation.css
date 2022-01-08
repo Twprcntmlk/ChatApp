@@ -1,3 +1,55 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+
+}
+
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(114, 46, 134);
+  width: 100vw;
+  padding-right: 0, 10px;
+  height: 75px;
+}
+
+.Brand_Title {
+  font-size: 1.5rem;
+  margin:1.75rem;
+  color: white;
+  text-decoration: none;
+}
+.Navbar_Login_SignUp_Container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin:1.75rem;
+}
+
+.Navbar_Login_SignUp_Container_Com{
+  min-width:70px;
+  color: white;
+  font-size: 1.1em;
+  text-decoration: none;
+
+}
+
 .profile-dropdown {
   position: absolute;
+  right:15px;
+  top: 65px;
+  list-style-type: none;
+  border-style: dashed;
+  background-color: rgb(204, 199, 199);
+  z-index:2;
+}
+.profile-dropdown>li{
+  font-size: 1.1em;
+  margin:1rem 1rem 1rem 0rem;
+}
+
+.AccountCircleIcon{
+  color: white;
+  margin:1.75rem;
 }
